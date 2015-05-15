@@ -3,7 +3,7 @@
   <body>
     <script src="/socket.io/socket.io.js"></script>
     <script>
-      var socket = io.connect('http://beaglebone.local:9090');
+      var socket = io.connect(window.location.origin);
       socket.on('news', function (data) {
         // console.log(data);
         var bidon = document.getElementById("bidon");
